@@ -1,3 +1,52 @@
+# VulnTrack
+
+[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Security](https://img.shields.io/badge/Focus-Vulnerability%20Management-red.svg)](#)
+
+> A Python-based vulnerability assessment and risk prioritization tool that
+> combines network scanning, vulnerability analysis, CPE/CVE intelligence,
+> and risk scoring into a structured security workflow.
+>
+> ## Architecture
+
+```text
+Target Host
+    │
+    ▼
+Host Enumerator
+    │
+    ▼
+Network Scanner
+    │
+    ▼
+Vulnerability Engine
+    │
+    ├── CPE Engine
+    │      │
+    │      ▼
+    │    CVE Engine
+    │
+    ▼
+Risk Engine
+    │
+    ▼
+Security Report
+
+## Risk Prioritization
+
+VulnTrack converts security findings into prioritized risk scores.
+
+Example:
+
+| Finding | Severity | Confidence | Risk Score | Priority |
+|---|---|---:|---:|---:|
+| Microsoft RPC Service Exposed | LOW | HIGH | 30 | P3 |
+| SMB Service Exposed | MEDIUM | HIGH | 60 | P2 |
+
+The goal is to help security analysts distinguish between findings
+that require immediate attention and lower-priority exposure.
+
 # VulnTrack v2.2
 
 > **Evidence-based vulnerability assessment platform for authorized security labs**
